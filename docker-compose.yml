@@ -16,7 +16,7 @@ x-airflow-common: &airflow-common
   volumes:
     - ./jobs:/opt/airflow/jobs
     - ./dags:/opt/airflow/dags
-    - ./logs:/opt/airflow/logs
+  #  - ./logs:/opt/airflow/logs
   depends_on:
     - postgres
   networks:
@@ -39,7 +39,7 @@ services:
       SPARK_MODE: worker
       SPARK_WORKER_CORES: 2
       SPARK_WORKER_MEMORY: 1g
-      SPARK_MASTER_URL: spark://spark-master:7077
+      SPARK_MASTER_URL: spark://spark-master:7077 
 
   postgres:
     image: postgres:14.0
