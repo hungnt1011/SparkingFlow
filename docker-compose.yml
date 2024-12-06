@@ -85,8 +85,8 @@ services:
   postgres_meta:
     image: postgres
     restart: unless-stopped
-    container_name: postgres
-    hostname: postgres
+    container_name: postgres_meta
+    hostname: postgres_meta
     environment:
       POSTGRES_DB: 'metastore_db'
       POSTGRES_USER: 'hive'
